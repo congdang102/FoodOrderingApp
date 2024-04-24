@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+section.hero {
+    @apply grid;
+    grid-template-columns: .4fr .6fr;
+}
+select,
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="text"]{
+    @apply block w-full my-2 rounded-xl;
+    @apply border p-2 bg-gray-100 border-gray-300;
+}
+input[type="email"]:disabled,
+input[type="password"]:disabled,
+input[type="tel"]:disabled,
+input[type="text"]:disabled{
+    @apply bg-gray-300 bottom-0 text-gray-500 cursor-not-allowed;
+}
+label{
+    @apply text-gray-500 text-sm leading-tight;
+}
+label + input {
+    margin-top: -2px;
+}
+button, .button{
+    @apply font-semibold text-gray-700 justify-center gap-2 w-full flex;
+    @apply border border-gray-500 rounded-xl px-6 py-2 ;
+}
+
+button[type="submit"], .submit {
+    @apply bg-red-500 text-white border-0;
+}
+button[type="submit"]:disabled, .submit:disabled {
+    @apply cursor-not-allowed bg-red-400;
+}
+div.tabs > * {
+    @apply bg-gray-300 rounded-full text-gray-700 py-2 px-4;
+}
+div.tabs > *.active {
+    @apply bg-red-500 text-white;
+}
+.uploaded-image {
+    width: 250px; /* Độ rộng mong muốn */
+    height: 250px; /* Độ cao mong muốn */
+    object-fit: cover; /* Đảm bảo ảnh bao phủ toàn bộ kích thước được xác định */
+    object-position: center; /* Căn giữa ảnh */
+}
